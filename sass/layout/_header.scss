@@ -1,0 +1,211 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.tyipng-demo {
+
+    width: 100%;
+    text-align: center;
+}
+
+.warpper {
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tyipng-demo {
+    direction: rtl;
+    width: 42ch;
+    animation: typing 5s steps(42), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-left: 3px solid;
+    font-size: 1.7rem;
+    font-weight: 700;
+    @include responsive ("phone") {
+       
+    font-size: 1.3rem;
+        
+
+    }
+
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+
+    }
+}
+
+.video-bg {
+    width: 100vw;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+.video-bg video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    position: fixed;
+    z-index: -1;
+}
+
+.tyipng-demo {
+    margin: 4rem 0;
+}
+
+.form-task {
+    position: relative;
+}
+
+.form-task input {
+    width: 50%;
+    padding: 1rem 4rem 1rem 1rem;
+    direction: rtl;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+
+    @include responsive ("phone") {
+        width: 90%;
+
+
+    }
+}
+
+.form-task button {
+    position: absolute;
+    top: 0px;
+    right: 25%;
+    padding: 1.1rem;
+    color: springgreen;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: transparent;
+    transition: background-color .4s ease;
+    @include responsive ("phone") {
+        right: 5%;
+
+    }
+
+    &:hover {
+        background-color: springgreen;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+.filter-input {
+    width: 50%;
+    padding: 1rem 4rem 1rem 1rem;
+    direction: rtl;
+    border-radius: 15px;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    @include responsive ("phone") {
+        width: 90%;
+        
+
+    }
+    &:focus {
+        border: 1px solid turquoise;
+    }
+
+    &::placeholder {
+        text-align: center;
+        font-size: 1rem;
+        letter-spacing: 5px;
+        color: #000;
+    }
+
+}
+
+// cod for item
+.list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo {
+    margin: 0.5rem;
+    color: #000;
+    background-color: #fff;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    border-radius: 10px;
+    padding-right: 20px;
+}
+
+.collection {
+    width: 51%;
+    @include responsive ("phone") {
+        width: 93%;
+        
+
+    }
+}
+
+.collection-item {
+    padding-right: 15px;
+}
+
+.fa-close {
+    pointer-events: none;
+    width: 50px;
+    padding: 15px;
+}
+
+.delete-btn {
+    background-color: transparent;
+
+    &:hover {
+        background-color: rgba(252, 21, 21, 0.781);
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+.clear-btn {
+    width: 50%;
+    padding: 1rem 4rem 1rem 1rem;
+    direction: rtl;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    background-color: rgba(204, 48, 48, 0.473);
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: background-color .4s ease;
+    @include responsive ("phone") {
+        width: 90%;
+
+    }
+
+    &:hover {
+        background-color: rgba(252, 21, 21, 0.781);
+        cursor: pointer;
+    }
+}
